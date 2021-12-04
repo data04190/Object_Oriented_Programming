@@ -1,4 +1,3 @@
-//Ã¥ Á¦¸ñ »çÀü ¼øÀ¸·Î ºñ±³ (< ¿¬»êÀÚ ÀÛ¼º)
 
 #include<iostream>
 #include<string>
@@ -12,7 +11,7 @@ public:
 		this->title = title; this->price = price; this->pages = pages;
 	}
 	void show() {
-		cout << title << ' ' << price << "¿ø " << pages << " ÆäÀÌÁö" << endl;
+		cout << title << ' ' << price << "ì› " << pages << " í˜ì´ì§€" << endl;
 	}
 	string getTitle() { return title; }
 	friend bool operator< (string b, Book a);
@@ -25,11 +24,11 @@ bool operator< (string b, Book a) {
 }
 
 int main() {
-	Book a("Ã»Ãá", 20000, 300);
+	Book a("ì²­ì¶˜", 20000, 300);
 	string b;
-	cout << "Ã¥ ÀÌ¸§À» ÀÔ·ÂÇÏ¼¼¿ä>>";
+	cout << "ì±… ì´ë¦„ì„ ì…ë ¥í•˜ì„¸ìš”>>";
 	getline(cin, b);
 	if (b < a)
-		cout << a.getTitle() << "ÀÌ " << b << "º¸´Ù µÚ¿¡ ÀÖ±¸³ª!" << endl;
+		cout << a.getTitle() << "ì´ " << b << "ë³´ë‹¤ ë’¤ì— ìˆêµ¬ë‚˜!" << endl;
 
 }
